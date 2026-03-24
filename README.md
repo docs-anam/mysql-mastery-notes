@@ -42,7 +42,14 @@ Comprehensive guides on transactions, ACID properties, and data consistency.
 ### 4. **Database Design: Notification System** (`04-database-design-notification/`) - Real-World Case Study
 Practical example of designing a notification system database.
 
-- *Content to be added*
+- **[1-intro.md](04-database-design-notification/1-intro.md)** - Overview, architecture, and key design challenges
+- **[2-requirements.md](04-database-design-notification/2-requirements.md)** - Functional and non-functional requirements, use cases
+- **[3-setup.md](04-database-design-notification/3-setup.md)** - Database and users table setup
+- **[4-categories.md](04-database-design-notification/4-categories.md)** - Notification categories and routing logic
+- **[5-preferences.md](04-database-design-notification/5-preferences.md)** - User notification preferences and category opt-in/out
+- **[6-inbox.md](04-database-design-notification/6-inbox.md)** - Notifications and user_notifications (inbox) tables
+- **[7-read-status.md](04-database-design-notification/7-read-status.md)** - Read/unread status tracking with read_at timestamp
+- **[8-counter.md](04-database-design-notification/8-counter.md)** - Unread badge counter with triggers and reconciliation
 
 ### 5. **Database Design: Multi-Language Support** (`05-database-design-multi-languages/`) - Real-World Case Study
 Designing databases for multi-language and internationalization support.

@@ -9,7 +9,21 @@ This repository is organized into progressive learning folders, each building on
 ### 1. **Database Fundamentals** (`01-database/`) - Database Concepts & Theory
 Learn the foundational concepts of databases and relational database design.
 
-- **[1-intro.md](01-database/1-intro.md)** - What is a database? RDBMS concepts and MySQL overview
+- **[1-intro.md](01-database/1-intro.md)** - Introduction to database fundamentals and RDBMS overview
+- **[2-database.md](01-database/2-database.md)** - What is a database? Definitions and core concepts
+- **[3-database-system.md](01-database/3-database-system.md)** - Database systems, components, and architecture
+- **[4-data-modeling.md](01-database/4-data-modeling.md)** - Data modeling concepts and approaches
+- **[5-attributes-type.md](01-database/5-attributes-type.md)** - Attributes, data types, and their characteristics
+- **[6-attribute-key.md](01-database/6-attribute-key.md)** - Keys, constraints, and their roles in relational design
+- **[7-erd.md](01-database/7-erd.md)** - Entity Relationship Diagrams (ERD): notation and construction
+- **[8-model-data-relational.md](01-database/8-model-data-relational.md)** - The relational model: tables, tuples, and relations
+- **[9-model-diagram.md](01-database/9-model-diagram.md)** - Database diagrams, schema notation, and visual modeling
+- **[10-data-normalization.md](01-database/10-data-normalization.md)** - Data normalization: purpose, benefits, and process
+- **[11-normal-form-1.md](01-database/11-normal-form-1.md)** - First Normal Form (1NF): atomicity and repeating groups
+- **[12-normal-form-2.md](01-database/12-normal-form-2.md)** - Second Normal Form (2NF): partial dependency elimination
+- **[13-normal-form-3.md](01-database/13-normal-form-3.md)** - Third Normal Form (3NF): transitive dependency elimination
+- **[14-denormalization.md](01-database/14-denormalization.md)** - Denormalization: when and how to trade normalization for performance
+- **[15-database-applications.md](01-database/15-database-applications.md)** - Real-world database applications and use case patterns
 
 ### 2. **MySQL Basics** (`02-mysql-database/`) - Essential Operations & Commands
 Learn the fundamentals of MySQL and essential commands for daily use.
@@ -51,15 +65,23 @@ Practical example of designing a notification system database.
 - **[7-read-status.md](04-database-design-notification/7-read-status.md)** - Read/unread status tracking with read_at timestamp
 - **[8-counter.md](04-database-design-notification/8-counter.md)** - Unread badge counter with triggers and reconciliation
 
-### 5. **Database Design: Multi-Language Support** (`05-database-design-multi-languages/`) - Real-World Case Study
-Designing databases for multi-language and internationalization support.
+### 5. **Database Design: Multi-Language System** (`05-database-design-multi-languages/`) - Real-World Case Study
+Designing a product catalog database that stores content in multiple languages using the translation-table pattern (i18n).
 
-- *Content to be added*
+- **[1-intro.md](05-database-design-multi-languages/1-intro.md)** - Overview, design approach comparison (inline columns vs JSON vs translation table), schema map
+- **[2-requirements.md](05-database-design-multi-languages/2-requirements.md)** - Functional requirements: language registry, slug uniqueness, fallback logic, completeness reporting
+- **[3-table-schema.md](05-database-design-multi-languages/3-table-schema.md)** - Full DDL: `languages`, `categories`, `category_translations`, `products`, `product_translations`
+- **[4-sql-implementation.md](05-database-design-multi-languages/4-sql-implementation.md)** - Seed data, fallback queries with `COALESCE`, slug lookup, upsert, completeness report, adding a new language
 
-### 6. **Database Design: Tokopedia Order History** (`06-database-design-tokopedia-order-history/`) - Real-World Case Study
-Advanced database design patterns based on an e-commerce order history system.
+### 6. **Database Design: Order History System** (`06-database-design-order-history/`) - Real-World Case Study
+Designing an immutable, audit-safe e-commerce order history database using the snapshot pattern to preserve prices, product names, and shipping addresses at the time of purchase.
 
-- *Content to be added*
+- **[1-intro.md](06-database-design-order-history/1-intro.md)** - Overview, the "data changes over time" problem, schema map
+- **[2-requirements.md](06-database-design-order-history/2-requirements.md)** - Functional requirements: price snapshot, status lifecycle, coupon history, address snapshot, analytics
+- **[3-history-vs-non-history.md](06-database-design-order-history/3-history-vs-non-history.md)** - Snapshot design vs live-join design: tradeoffs, failure scenarios, and when to use each
+- **[4-entity-relationship-design.md](06-database-design-order-history/4-entity-relationship-design.md)** - ERD: all entities, column details, relationships, and hard vs soft FK decisions
+- **[5-implementation.md](06-database-design-order-history/5-implementation.md)** - Full DDL: `users`, `products`, `coupons`, `orders`, `order_items`, `order_status_logs`, trigger
+- **[6-data-simulation.md](06-database-design-order-history/6-data-simulation.md)** - Seed data, order placement transactions, status transitions, snapshot proof, analytics queries
 
 ## 🚀 Features
 

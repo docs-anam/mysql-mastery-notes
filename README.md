@@ -15,22 +15,29 @@ Learn the foundational concepts of databases and relational database design.
 Learn the fundamentals of MySQL and essential commands for daily use.
 
 - **[1-intro.md](02-mysql-database/1-intro.md)** - Module overview and recommended learning sequence
-- **[2-into-database-system.md](02-mysql-database/2-into-database-system.md)** - Entering the MySQL database system
+- **[2-mysql-client.md](02-mysql-database/2-mysql-client.md)** - MySQL CLI, connection flags, and server architecture
 - **[3-intro-sql.md](02-mysql-database/3-intro-sql.md)** - SQL basics and command categories
 - **[4-install-mysql.md](02-mysql-database/4-install-mysql.md)** - Installation and initial setup
 - **[5-database.md](02-mysql-database/5-database.md)** - Creating and managing databases
 - **[6-data-type.md](02-mysql-database/6-data-type.md)** - Data types consolidated guide
 - **[7-table.md](02-mysql-database/7-table.md)** - Table design and CRUD consolidated guide
-- **[8-alias.md](02-mysql-database/8-alias.md)** - Filtering, sorting, and pagination consolidated guide
-- **[9-numeric-function.md](02-mysql-database/9-numeric-function.md)** - SQL functions and grouping consolidated guide
-- **[10-constraint.md](02-mysql-database/10-constraint.md)** - Constraints, indexing, and full-text search consolidated guide
-- **[11-table-relationship.md](02-mysql-database/11-table-relationship.md)** - Relationships, joins, subqueries, and set operators consolidated guide
-- **[12-transaction.md](02-mysql-database/12-transaction.md)** - Transactions, locking, user management, backup, and restore consolidated guide
+- **[8-filtering-sorting-pagination.md](02-mysql-database/8-filtering-sorting-pagination.md)** - WHERE operators, ORDER BY, and LIMIT/OFFSET
+- **[9-functions-and-grouping.md](02-mysql-database/9-functions-and-grouping.md)** - SQL functions, GROUP BY, and HAVING
+- **[10-constraint.md](02-mysql-database/10-constraint.md)** - Constraints, indexing, and full-text search
+- **[11-table-relationship.md](02-mysql-database/11-table-relationship.md)** - Relationships, JOINs, subqueries, and set operators
+- **[12-transaction.md](02-mysql-database/12-transaction.md)** - Transactions, isolation levels, and locking
+- **[13-user-management.md](02-mysql-database/13-user-management.md)** - User accounts, GRANT/REVOKE, and least-privilege design
+- **[14-backup-restore.md](02-mysql-database/14-backup-restore.md)** - mysqldump, binary log, and point-in-time recovery
 
 ### 3. **ACID Properties & Transactions** (`03-mysql-database-acid/`) - Data Integrity & Consistency
 Comprehensive guides on transactions, ACID properties, and data consistency.
 
-- *Content to be added*
+- **[1-intro.md](03-mysql-database-acid/1-intro.md)** - ACID overview, learning path, and InnoDB mechanisms
+- **[2-setup-project.md](03-mysql-database-acid/2-setup-project.md)** - Banking schema project setup with seed data
+- **[3-atomicity.md](03-mysql-database-acid/3-atomicity.md)** - Atomicity: all-or-nothing transactions and undo log
+- **[4-consistency.md](03-mysql-database-acid/4-consistency.md)** - Consistency: constraints, triggers, and valid state
+- **[5-isolation.md](03-mysql-database-acid/5-isolation.md)** - Isolation: concurrency anomalies, levels, and MVCC
+- **[6-durability.md](03-mysql-database-acid/6-durability.md)** - Durability: redo log, fsync, and crash recovery
 
 ### 4. **Database Design: Notification System** (`04-database-design-notification/`) - Real-World Case Study
 Practical example of designing a notification system database.

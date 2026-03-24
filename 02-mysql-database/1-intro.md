@@ -1,33 +1,89 @@
-# Introduction to MySQL Basics
+# Introduction to MySQL
 
 ## Overview
 
-This module continues from database fundamentals into practical MySQL usage. You will learn how to install MySQL, design tables, run SQL queries, manage data, and apply production-friendly practices.
+This module builds on the database fundamentals in section 01 and moves into **practical MySQL usage**. You will learn how to install MySQL, model schemas, write SQL queries, manage data integrity, optimize performance, and apply production-ready practices.
+
+## What is MySQL?
+
+**MySQL** is the world's most popular open-source relational database management system (RDBMS). It is:
+
+- **Fast** — optimized storage engine (InnoDB) handles millions of rows efficiently
+- **Reliable** — full ACID transaction support ensures data consistency
+- **Widely supported** — used by companies like Facebook, Twitter, Airbnb, and Wikipedia
+- **Standard SQL** — follows SQL standards with useful MySQL-specific extensions
+- **Free & open source** — community edition under GPL license
+
+```
+┌─────────────────────────────────────────────┐
+│               MySQL Ecosystem               │
+│                                             │
+│  ┌─────────────┐    ┌──────────────────┐    │
+│  │  Your App   │───▶│  MySQL Server    │    │
+│  │  (backend)  │    │  (mysqld daemon) │    │
+│  └─────────────┘    └────────┬─────────┘    │
+│                              │              │
+│                   ┌──────────▼──────────┐   │
+│                   │  InnoDB Storage     │   │
+│                   │  Engine             │   │
+│                   │  – ACID compliance  │   │
+│                   │  – Row-level locks  │   │
+│                   │  – Foreign keys     │   │
+│                   └─────────────────────┘   │
+└─────────────────────────────────────────────┘
+```
 
 ## Learning Path
 
-1. [Enter Database System](2-into-database-system.md)
-2. [SQL Introduction](3-intro-sql.md)
-3. [Install MySQL](4-install-mysql.md)
-4. [Database and Table Basics](5-database.md)
-5. [Data Types](6-data-type.md) through [11-data-type-others.md](11-data-type-others.md)
-6. [DML Basics](13-insert-data.md) to [18-delete-data.md](18-delete-data.md)
-7. [Filtering, Sorting, and Paging](16-where-clause.md), [21-order-by-clause.md](21-order-by-clause.md), [22-limit-clause.md](22-limit-clause.md)
-8. [Functions and Aggregation](24-numeric-function.md) to [30-grouping.md](30-grouping.md)
-9. [Constraints, Indexes, and Search](31-constraint.md) to [33-full-text-search.md](33-full-text-search.md)
-10. [Relationships and Joins](33-table-relationship.md) to [39-sub-query.md](39-sub-query.md)
-11. [Transactions, Locking, and Administration](41-transaction.md) to [45-restore-database.md](45-restore-database.md)
+| # | Topic | What You Learn |
+|---|-------|----------------|
+| 1 | [MySQL Client and Connecting](2-mysql-client.md) | MySQL CLI, session commands, server architecture |
+| 2 | [Introduction to SQL](3-intro-sql.md) | SQL categories (DDL/DML/DQL/TCL/DCL), query anatomy |
+| 3 | [Installing MySQL](4-install-mysql.md) | Setup on macOS, Linux, and Docker |
+| 4 | [Working with Databases](5-database.md) | CREATE, USE, DROP, character sets, collations |
+| 5 | [Data Types](6-data-type.md) | Numeric, string, date-time, JSON, ENUM |
+| 6 | [Tables and CRUD](7-table.md) | CREATE TABLE, INSERT, SELECT, UPDATE, DELETE |
+| 7 | [Filtering, Sorting, Pagination](8-filtering-sorting-pagination.md) | WHERE, ORDER BY, LIMIT/OFFSET, aliases |
+| 8 | [Functions and Grouping](9-functions-and-grouping.md) | Built-in functions, GROUP BY, HAVING |
+| 9 | [Constraints, Indexes, and Search](10-constraint.md) | Data integrity, indexes, full-text search |
+| 10 | [Relationships and Joins](11-table-relationship.md) | JOINs, subqueries, relationship patterns |
+| 11 | [Transactions and Locking](12-transaction.md) | ACID, START/COMMIT/ROLLBACK, isolation levels |
+| 12 | [User and Permission Management](13-user-management.md) | CREATE USER, GRANT, REVOKE, least privilege |
+| 13 | [Backup and Restore](14-backup-restore.md) | mysqldump, restore, binary logs, backup strategy |
 
-## Outcome
+## Why Learn MySQL?
 
-By the end of this module, you should be able to:
+Understanding MySQL deeply is **essential** because:
 
-- Build a relational schema in MySQL
-- Write reliable CRUD queries
-- Optimize read performance with indexes
-- Maintain data integrity with constraints and transactions
-- Perform backup and restore procedures
+- ✅ It is used in production at massive scale worldwide
+- ✅ Correct schema design prevents costly data migrations later
+- ✅ Proper indexing can make queries 100x faster
+- ✅ Understanding transactions protects against data corruption
+- ✅ Most backend frameworks (Laravel, Django, Rails, Spring) use MySQL as their primary database
+
+## Prerequisites
+
+Before starting this module, make sure you understand:
+
+- **Entities and attributes** — what a table and column represent
+- **Primary and foreign keys** — how tables relate to each other
+- **Normalization** — basic 1NF, 2NF, 3NF concepts
+- **ERDs** — how to read entity-relationship diagrams
+
+All of these are covered in the [01-database](../01-database/1-intro.md) module.
+
+## Key Concepts to Master
+
+By the end of this module you should be able to:
+
+- **Design** a normalized relational schema from requirements
+- **Write** correct SELECT, INSERT, UPDATE, and DELETE statements
+- **Use** JOINs to combine data across multiple tables
+- **Apply** constraints and indexes to ensure integrity and performance
+- **Manage** transactions to protect multi-step operations
+- **Create** users and manage permissions securely
+- **Back up and restore** a MySQL database
 
 ## Next Step
 
-Continue to [2-into-database-system.md](2-into-database-system.md).
+Start with **[MySQL Client and Connecting](2-mysql-client.md)** to learn how to connect to and navigate a MySQL server.
